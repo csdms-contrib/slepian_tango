@@ -7,6 +7,7 @@ These functions allow the user to create a Markov chain Monte Carlo inversion fo
 
 The primary function in this repository is markovchain.m, which is where the user sets all of the initial parameters for the MCMC inversion and loads the file that contains the observed geoid. This function returns a set of ensemble variables that are used to create posterior statistics. This function can be started at the first iteration of the Markov chain or at an intermediate iteration if the inversion was interrupted. A sample script for running this function is provided below.
 
+```matlab
 % set the Matlab path for the various local Slepian repositories at the top of the script
 
 Step = 1000000; % set the maximum number of iterations for the inversion
@@ -38,3 +39,4 @@ while jj < 2
     jj = jj+1;
     RJMCMC_Model = PROPOSALSGLOBAL;
 end
+```
